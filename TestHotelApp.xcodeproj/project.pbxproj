@@ -8,24 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		2375301E2B2CBF78004AB734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2375301D2B2CBF78004AB734 /* AppDelegate.swift */; };
-		237530202B2CBF79004AB734 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2375301F2B2CBF78004AB734 /* SceneDelegate.swift */; };
 		237530222B2CBF79004AB734 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237530212B2CBF79004AB734 /* ViewController.swift */; };
-		237530252B2CBF79004AB734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237530232B2CBF79004AB734 /* Main.storyboard */; };
-		237530282B2CBF79004AB734 /* TestHotelApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 237530262B2CBF79004AB734 /* TestHotelApp.xcdatamodeld */; };
 		2375302A2B2CBF7A004AB734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237530292B2CBF7A004AB734 /* Assets.xcassets */; };
 		2375302D2B2CBF7A004AB734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2375302B2B2CBF7A004AB734 /* LaunchScreen.storyboard */; };
+		237530362B2CC30D004AB734 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237530352B2CC30D004AB734 /* AppCoordinator.swift */; };
+		237530382B2CC322004AB734 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237530372B2CC322004AB734 /* CoordinatorProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2375301A2B2CBF78004AB734 /* TestHotelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHotelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2375301D2B2CBF78004AB734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2375301F2B2CBF78004AB734 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		237530212B2CBF79004AB734 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		237530242B2CBF79004AB734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		237530272B2CBF79004AB734 /* TestHotelApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestHotelApp.xcdatamodel; sourceTree = "<group>"; };
 		237530292B2CBF7A004AB734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2375302C2B2CBF7A004AB734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2375302E2B2CBF7A004AB734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		237530352B2CC30D004AB734 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		237530372B2CC322004AB734 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +56,23 @@
 		2375301C2B2CBF78004AB734 /* TestHotelApp */ = {
 			isa = PBXGroup;
 			children = (
+				237530342B2CC2FA004AB734 /* Coordinator */,
 				2375301D2B2CBF78004AB734 /* AppDelegate.swift */,
-				2375301F2B2CBF78004AB734 /* SceneDelegate.swift */,
 				237530212B2CBF79004AB734 /* ViewController.swift */,
-				237530232B2CBF79004AB734 /* Main.storyboard */,
 				237530292B2CBF7A004AB734 /* Assets.xcassets */,
 				2375302B2B2CBF7A004AB734 /* LaunchScreen.storyboard */,
 				2375302E2B2CBF7A004AB734 /* Info.plist */,
-				237530262B2CBF79004AB734 /* TestHotelApp.xcdatamodeld */,
 			);
 			path = TestHotelApp;
+			sourceTree = "<group>";
+		};
+		237530342B2CC2FA004AB734 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				237530352B2CC30D004AB734 /* AppCoordinator.swift */,
+				237530372B2CC322004AB734 /* CoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +135,6 @@
 			files = (
 				2375302D2B2CBF7A004AB734 /* LaunchScreen.storyboard in Resources */,
 				2375302A2B2CBF7A004AB734 /* Assets.xcassets in Resources */,
-				237530252B2CBF79004AB734 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,24 +145,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237530362B2CC30D004AB734 /* AppCoordinator.swift in Sources */,
 				237530222B2CBF79004AB734 /* ViewController.swift in Sources */,
+				237530382B2CC322004AB734 /* CoordinatorProtocol.swift in Sources */,
 				2375301E2B2CBF78004AB734 /* AppDelegate.swift in Sources */,
-				237530282B2CBF79004AB734 /* TestHotelApp.xcdatamodeld in Sources */,
-				237530202B2CBF79004AB734 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		237530232B2CBF79004AB734 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				237530242B2CBF79004AB734 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2375302B2B2CBF7A004AB734 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -301,7 +297,6 @@
 				INFOPLIST_FILE = TestHotelApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -329,7 +324,6 @@
 				INFOPLIST_FILE = TestHotelApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -367,19 +361,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		237530262B2CBF79004AB734 /* TestHotelApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				237530272B2CBF79004AB734 /* TestHotelApp.xcdatamodel */,
-			);
-			currentVersion = 237530272B2CBF79004AB734 /* TestHotelApp.xcdatamodel */;
-			path = TestHotelApp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 237530122B2CBF78004AB734 /* Project object */;
 }
